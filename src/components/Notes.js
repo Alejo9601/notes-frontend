@@ -1,6 +1,7 @@
 import notes from "../assets/notas_prueba.json";
 import Note from "./Note";
 import styled from "styled-components";
+import NewNoteForm from "./NewNoteForm";
 
 const StyledH1 = styled.h1`
   font-size: 3rem;
@@ -15,10 +16,7 @@ const Notes = () => {
           <Note key={index} content={note.content} date={note.date} />
         ))}
       </ol>
-      <form>
-        <input type="text"></input>
-        <button>Create note</button>
-      </form>
+      <NewNoteForm />
     </div>
   );
 };

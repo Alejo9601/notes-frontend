@@ -3,13 +3,16 @@ import Note from "./Note";
 import styled from "styled-components";
 import NewNoteForm from "./NewNoteForm";
 
+const StyledDiv = styled.div`
+  margin: 20px;
+`;
 const StyledH1 = styled.h1`
   font-size: 3rem;
 `;
 
 const Notes = () => {
   return (
-    <div>
+    <StyledDiv>
       <StyledH1>Notes</StyledH1>
       <ol>
         {notes.map((note, index) => (
@@ -17,7 +20,7 @@ const Notes = () => {
         ))}
       </ol>
       <NewNoteForm />
-    </div>
+    </StyledDiv>
   );
 };
 

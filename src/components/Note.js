@@ -1,11 +1,18 @@
-const Note = ({ id, content, date, important }) => {
+import styled from "styled-components";
+
+const StyledLi = styled.li`
+  width: fit-content;
+  text-align: left;
+  font-size: 1.3rem;
+`;
+
+const Note = ({ content, date }) => {
   return (
-    <li>
-      <span>{id}</span>
+    <StyledLi>
       <span>{content}</span>
-      <span>{date}</span>
-      <span>{important}</span>
-    </li>
+      <br></br>
+      <small>{date}</small>
+    </StyledLi>
   );
 };
 

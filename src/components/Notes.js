@@ -5,13 +5,7 @@ const Notes = () => {
   return (
     <ol>
       {notes.map((note, index) => (
-        <Note
-          key={index}
-          id={note.id}
-          content={note.content}
-          date={note.date}
-          important={note.important}
-        />
+        <Note key={index} content={note.content} date={note.date} />
       ))}
     </ol>
   );

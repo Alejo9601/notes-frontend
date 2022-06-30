@@ -4,6 +4,13 @@ const StyledLi = styled.li`
   width: fit-content;
   text-align: left;
   font-size: 1.3rem;
+  margin-bottom: 10px;
+  span {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  small {
+    color: blue;
+  }
 `;
 
 const Note = ({ content, date }) => {

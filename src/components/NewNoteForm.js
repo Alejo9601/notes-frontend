@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import styled from "styled-components";
 
 const StyledForm = styled.form`
@@ -18,9 +19,13 @@ const StyledForm = styled.form`
 `;
 
 const NewNoteForm = () => {
+  const inputRef = useRef();
+
+  const handleSubmit = () => {};
+
   return (
-    <StyledForm>
-      <input type="text"></input>
+    <StyledForm onSubmit={handleSubmit}>
+      <input ref={inputRef} type="text"></input>
       <button>Create note</button>
     </StyledForm>
   );

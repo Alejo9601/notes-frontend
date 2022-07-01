@@ -1,7 +1,8 @@
-import notes from "../assets/notas_prueba.json";
 import Note from "./Note";
 import styled from "styled-components";
 import NewNoteForm from "./NewNoteForm";
+import { useContext } from "react";
+import NotesContext from "../context/NotesContext";
 
 const StyledDiv = styled.div`
   margin: 20px;
@@ -11,6 +12,8 @@ const StyledH1 = styled.h1`
 `;
 
 const Notes = () => {
+  const { notes } = useContext(NotesContext);
+
   return (
     <StyledDiv>
       <StyledH1>Notes</StyledH1>

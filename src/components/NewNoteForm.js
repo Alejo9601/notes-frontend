@@ -1,5 +1,6 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import styled from "styled-components";
+import NotesContext from "../context/NotesContext";
 
 const StyledForm = styled.form`
   input,
@@ -20,8 +21,25 @@ const StyledForm = styled.form`
 
 const NewNoteForm = () => {
   const inputRef = useRef();
+  const { notes, setNotes } = useContext(NotesContext);
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (inputRef.current.value === "") {
+      alert("Please write content...");
+      return;
+    }
+
+    const newNote = {
+      id: notes.length + 1,
+      content: inputRef.current.value,
+      date: new Date().toISOString(),
+      important: Math.random() > 0.5,
+    };
+
+    setNotes([...notes, newNote]);
+  };
 
   return (
     <StyledForm onSubmit={handleSubmit}>

@@ -1,10 +1,13 @@
 import Notes from "./components/Notes";
+import { NotesContextProvider } from "./context/NotesContext";
 
 function App() {
   return (
-    <div className="App">
-      <Notes />
-    </div>
+    <NotesContextProvider>
+      <div className="App">
+        <Notes />
+      </div>
+    </NotesContextProvider>
   );
 }
 

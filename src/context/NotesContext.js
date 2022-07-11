@@ -1,10 +1,16 @@
-import { createContext, useState } from "react";
-import notesJson from "../assets/notas_prueba.json";
+import { createContext, useEffect, useState } from "react";
+// import notesJson from "../assets/notas_prueba.json";
+import getAllNotes from "../services/getAllNotes";
 
 const NotesContext = createContext();
 
 const NotesContextProvider = ({ children }) => {
-  const [notes, setNotes] = useState(notesJson);
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    getAllNotes().then((res) => setNotes(res));
+    console.log(notes);
+  }, []);
 
   const data = {
     notes,

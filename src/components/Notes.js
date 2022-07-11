@@ -5,9 +5,10 @@ import { useContext } from "react";
 import NotesContext from "../context/NotesContext";
 
 const StyledDiv = styled.div`
-  margin: 20px;
+  padding: 0px 50px;
 `;
 const StyledH1 = styled.h1`
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 3rem;
 `;
 

@@ -5,8 +5,10 @@ const StyledLi = styled.li`
   text-align: left;
   font-size: 1.3rem;
   margin-bottom: 10px;
+
   span {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
   }
   small {
     color: blue;

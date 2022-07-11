@@ -21,7 +21,7 @@ const StyledForm = styled.form`
 
 const NewNoteForm = () => {
   const inputRef = useRef();
-  const { notes, addNewNote } = useContext(NotesContext);
+  const { addNewNote } = useContext(NotesContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -27,7 +27,7 @@ const NewNoteForm = () => {
     e.preventDefault();
 
     if (inputRef.current.value === "") {
-      alert("Please write content...");
+      alert("Please write some content...");
       return;
     }
 
@@ -36,6 +36,7 @@ const NewNoteForm = () => {
       important: Math.random() > 0.5,
     };
 
+    inputRef.current.value = "";
     addNewNote(newNote);
   };
 

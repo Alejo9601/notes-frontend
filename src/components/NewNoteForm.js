@@ -21,7 +21,7 @@ const StyledForm = styled.form`
 
 const NewNoteForm = () => {
   const inputRef = useRef();
-  const { notes, setNotes } = useContext(NotesContext);
+  const { notes, addNewNote } = useContext(NotesContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,13 +32,11 @@ const NewNoteForm = () => {
     }
 
     const newNote = {
-      id: notes.length + 1,
       content: inputRef.current.value,
-      date: new Date().toISOString(),
       important: Math.random() > 0.5,
     };
 
-    setNotes([...notes, newNote]);
+    addNewNote(newNote);
   };
 
   return (

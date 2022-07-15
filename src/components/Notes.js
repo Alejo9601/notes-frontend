@@ -6,6 +6,7 @@ import Header from "./Header";
 
 const StyledDiv = styled.div`
   padding: 0px 50px;
+  width: 70%;
 `;
 
 const Notes = () => {

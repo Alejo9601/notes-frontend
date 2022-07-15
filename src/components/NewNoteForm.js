@@ -7,15 +7,20 @@ const StyledForm = styled.form`
   button {
     font-size: 1.2rem;
     padding: 0px 20px;
+    border: 0px;
+    height: 34px;
   }
 
   input {
-    height: 30px;
     width: 400px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    outline: none;
   }
 
   button {
-    height: 34px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
 `;
 

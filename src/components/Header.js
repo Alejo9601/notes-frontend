@@ -3,7 +3,7 @@ import NewNoteForm from "./NewNoteForm";
 
 const StyledHeader = styled.header`
   width: 100%;
-  margin-bottom: 30px;
+  margin: 30px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -21,6 +21,9 @@ const StyledForm = styled.form`
   button {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    background-color: #1f4690;
+    cursor: pointer;
+    color: white;
   }
 `;
 

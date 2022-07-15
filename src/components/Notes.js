@@ -9,6 +9,17 @@ const StyledDiv = styled.div`
   width: 70%;
 `;
 
+const StyledButton = styled.button`
+  padding: 0px 20px;
+  background-color: #1f4690;
+  cursor: pointer;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 0px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+`;
+
 const Notes = () => {
   const { notes, removeNote } = useContext(NotesContext);
 
@@ -19,7 +30,9 @@ const Notes = () => {
         {notes.map((note, index) => (
           <>
             <Note key={index} content={note.content} date={note.date} />
-            <button onClick={() => removeNote(note.id)}>DELETE</button>
+            <StyledButton onClick={() => removeNote(note.id)}>
+              Delete
+            </StyledButton>
           </>
         ))}
       </ol>

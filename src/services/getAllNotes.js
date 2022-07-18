@@ -1,5 +1,7 @@
 const getAllNotes = () => {
-  return fetch("http://localhost:3001/api/notes").then((res) => res.json());
+  return fetch("https://pure-harbor-09905.herokuapp.com/api/notes").then(
+    (res) => res.json()
+  );
 };
 
 export default getAllNotes;

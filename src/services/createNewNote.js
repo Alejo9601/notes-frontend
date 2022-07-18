@@ -6,9 +6,10 @@ const createNewNote = (newNote) => {
     },
     body: JSON.stringify(newNote),
   };
-  return fetch(`http://localhost:3001/api/notes`, options).then((res) =>
-    res.json()
-  );
+  return fetch(
+    `https://pure-harbor-09905.herokuapp.com/api/notes`,
+    options
+  ).then((res) => res.json());
 };
 
 export default createNewNote;

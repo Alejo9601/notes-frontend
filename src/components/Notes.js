@@ -7,6 +7,11 @@ import Header from "./Header";
 const StyledDiv = styled.div`
   padding: 0px 50px;
   width: 70%;
+
+  @media (max-width: 500px) {
+    padding: 0;
+    width: 80%;
+  }
 `;
 
 const StyledButton = styled.button`

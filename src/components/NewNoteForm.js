@@ -25,6 +25,14 @@ const StyledForm = styled.form`
     cursor: pointer;
     color: white;
   }
+
+  @media (max-width: 500px) {
+    input {
+      margin-top: 20px;
+      width: 94%;
+      height: 40px;
+    }
+  }
 `;
 
 const NewNoteForm = () => {

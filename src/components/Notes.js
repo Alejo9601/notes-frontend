@@ -3,10 +3,12 @@ import styled from "styled-components";
 import { useContext } from "react";
 import NotesContext from "../context/NotesContext";
 import Header from "./Header";
+import Loader from "./Loader";
 
 const StyledDiv = styled.div`
   padding: 0px 50px;
   width: 70%;
+  position: relative;
 
   @media (max-width: 500px) {
     padding: 0;
@@ -31,16 +33,20 @@ const Notes = () => {
   return (
     <StyledDiv>
       <Header />
-      <ol>
-        {notes.map((note, index) => (
-          <>
-            <Note key={index} content={note.content} date={note.date} />
-            <StyledButton onClick={() => removeNote(note.id)}>
-              Delete
-            </StyledButton>
-          </>
-        ))}
-      </ol>
+      {notes.length !== 0 ? (
+        <ol>
+          {notes.map((note, index) => (
+            <>
+              <Note key={index} content={note.content} date={note.date} />
+              <StyledButton onClick={() => removeNote(note.id)}>
+                Delete
+              </StyledButton>
+            </>
+          ))}
+        </ol>
+      ) : (
+        <Loader />
+      )}
     </StyledDiv>
   );
 };
